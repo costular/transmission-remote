@@ -1,6 +1,7 @@
 package com.costular.transmissionremote.torrents
 
 import com.costular.transmission_rc.api.domain.TorrentInfo
+import com.costular.transmission_rc.api.domain.TorrentInfoCollection
 import io.reactivex.Observable
 
 /**
@@ -8,7 +9,7 @@ import io.reactivex.Observable
  */
 interface TorrentDataSource {
 
-    fun getTorrents(): Observable<List<TorrentInfo>>
+    fun getTorrents(): Observable<TorrentInfoCollection>
 
     fun getTorrent(id: Long): Observable<TorrentInfo>
 

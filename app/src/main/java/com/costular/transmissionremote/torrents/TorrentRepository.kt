@@ -2,6 +2,7 @@ package com.costular.transmissionremote.torrents
 
 import com.costular.transmission_rc.api.TransmissionClient
 import com.costular.transmission_rc.api.domain.TorrentInfo
+import com.costular.transmission_rc.api.domain.TorrentInfoCollection
 import io.reactivex.Observable
 import javax.inject.Inject
 
@@ -10,7 +11,7 @@ import javax.inject.Inject
  */
 class TorrentRepository @Inject constructor(private val client: TransmissionClient): TorrentDataSource {
 
-    override fun getTorrents(): Observable<List<TorrentInfo>> {
+    override fun getTorrents(): Observable<TorrentInfoCollection> {
         return Observable.empty()
     }
 

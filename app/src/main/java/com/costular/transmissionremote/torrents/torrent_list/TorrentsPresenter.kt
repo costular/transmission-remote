@@ -43,14 +43,12 @@ class TorrentsPresenter @Inject constructor(private val repository: TorrentRepos
                 .subscribeBy(
                         onNext = {
                             torrentsView.showLoading(false)
-                            torrentsView.showTorrents(it)
+                            torrentsView.showTorrents(it.torrents)
                         },
                         onError = {
                             torrentsView.showLoading(false)
                             torrentsView.showError(it.message!!)
                         }
                 )
-
-
     }
 }
